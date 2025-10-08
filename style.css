@@ -1,0 +1,295 @@
+@font-face {
+  font-family: "bangla1";
+  src: url(./fonts/Unicode/Li\ Jashir\ Abhyuday\ Unicode.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "solaimanlipi";
+  src: url(./fonts/SolaimanLipi.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: black;
+}
+
+input[type="date"] {
+  width: 1.4vw;
+  height: 1.5vw;
+  border: none;
+}
+
+h2, h3{
+  font-family: "solaimanlipi", "bangla1";
+}
+
+.highlighted-news-img img{
+  width: 10vw;
+}
+
+/* header section  */
+.header-section {
+  width: 100%;
+  height: 25vw;
+}
+
+header{
+  margin: 5vw 0;
+  width: 100%;
+}
+
+h1{
+  font-weight: 900;
+  font-size: 350%;
+  font-family: "bangla1","solaimanlipi";
+}
+
+.upper-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3vw 7vw 2vw 7vw;
+}
+
+.e-paper{
+  color: red;
+}
+
+.topics{
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.topic-dropdown{
+  cursor: pointer;
+}
+
+.dropdown-content > li{
+  display: none;
+  padding: 0.5vw 1vw;
+}
+
+.dropdown-content > li:hover{
+  background-color: rgba(128, 128, 128, 0.205);
+}
+
+.dropdown-content{
+  list-style: none;
+  position: relative;
+  top: 20%;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  
+}
+
+.drop-icon{
+  font-size: 60%;
+  color: black;
+}
+
+.lower-section{
+  background-color: rgba(128, 128, 128, 0.13);
+  padding: 1vw 0;
+}
+
+.lower-section nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7vw;
+  font-family: solaimanlipi, bangla1;
+  font-size: 120%;
+  font-weight: 580;
+}
+
+/* Highlighted Section */
+.Highlighted-section {
+  padding: 2vw 5vw 4vw 5vw;
+  background-color: rgba(173, 216, 230, 0.292);
+  border-bottom: 3px solid rgba(128, 128, 128, 0.207);
+  border-top: 3px solid rgba(128, 128, 128, 0.209);
+}
+
+.highlighted-title {
+  font-size: 200%;
+  font-weight: 700;
+  font-family: "bangla1","solaimanlipi";
+  margin-bottom: 3vw;
+  text-align: center;
+}
+
+.highlighted{
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+}
+
+.highlighted-news-main{
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+.highlighted-news-img {
+  margin-right: 1vw;
+}
+
+#main-img {
+  padding-top: 1vw;
+}
+
+#main-img img{
+  width: 20vw;
+  height: 12vw;
+  object-fit: cover;
+}
+
+.highlighted-news-title {
+  font-size: 170%;
+  font-weight: 700;
+  font-family: "bangla1","solaimanlipi";
+  margin-bottom: 1vw;
+}
+
+.small-highlighted-news{
+  display: flex;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+.small-news{
+  display: flex;
+  gap: 0.5vw;
+  align-items: center;
+  width: 20vw;
+  padding: 0 0 1vw 0;
+}
+
+.highlighted-news-paragraph{
+  font-size: 85%;
+  /* font-family: "solaimanlipi", "bangla1"; */
+}
+
+/* More news Section */
+.more-news-section{
+  padding: 10vw 5vw 4vw 5vw;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.more-news{
+  width: 65%;
+}
+
+.main-news{
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-bottom: 2vw;
+  width: 62vw;
+  border-right: 2px solid rgba(0, 0, 0, 0.269);
+  padding-right: 2vw;
+}
+
+.main-news-title{
+  font-size: 170%;
+}
+
+.main-news-img img{
+  width: 31vw;
+  /* height: 12vw; */
+  object-fit: cover;
+}
+
+.side-news-article img{
+  width: 15vw;
+  /* height: 10vw; */
+  object-fit: cover;
+}
+
+.side-news-article{
+  width: 15vw;
+  /* display: flex; */
+}
+
+.side-news-paragraph{
+  font-size: 125%;
+  margin-bottom: 0.5vw;
+  font-weight: 600;
+  font-family: "solaimanlipi", "bangla1";
+}
+
+.strip-news {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.strip-news-card img{
+  width: 12vw;
+  object-fit: cover;
+}
+
+.strip-news-card {
+  width: 12vw;
+  height: 15vw;
+  font-size: 80%;
+  font-weight: 600; 
+  line-height: 1.5vw;
+}
+
+aside{
+  width: 28%;
+}
+
+.aside-title{
+  font-size: 130%;
+  font-weight: 700;
+  font-family: "bangla1","solaimanlipi";
+  margin-bottom: 2vw;
+}
+
+.aside-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4vw;
+  padding-bottom: 1vw;
+  padding-top: 1vw;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.53);
+  border-top: 1px solid rgba(128, 128, 128, 0.53);
+}
+
+.aside-menu p:first-child a{
+  color: red;
+}
+
+.new-headline{
+  font-size: 110%;
+  font-weight: 500;
+  margin-bottom: 2vw;
+}
+
+.news-time{
+  font-size: 80%;
+  color: rgba(0, 0, 0, 0.802);
+  margin-right: 0.5vw;
+  display: inline-block;
+  margin-top: 0.5vw;
+}
+
+.new-headline i{
+  color: rgb(255, 56, 56);
+  margin-right: 0.5vw;
+}

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangla News Site</title>
+
+    <!-- ====== External CSS File ====== -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- ====== Font Awesome Add ====== -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- ====== Header Section Start ====== -->
+    <div class="header-section">
+      <header>
+        <div class="upper-section">
+          <div class="date-today">
+            <p>ঢাকা, মঙ্গলবার ০৭ অক্টোবর ২০২৫</p>
+            <p>২২ আশ্বিন ১৪৩২, ১৪ রবিউস সানি ১৪৪৭</p>
+          </div>
+          <div class="newspaper-title">
+            <h1>কালের কন্ঠ</h1>
+          </div>
+          <div class="social-icons">
+            <span class="e-paper">ই-পেপার</span>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-square-threads"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="date" id="date" />
+            <i class="fa-solid fa-language"></i>
+          </div>
+        </div>
+        <div class="lower-section">
+          <nav>
+            <p><a href="#" class="topics">সর্বশেষ</a></p>
+            <div class="topic-dropdown">
+              <p onclick="showList('bang', '.content-bang')">বাংলাদেশ <i class="fa-solid fa-play drop-icon"></i></p>
+              <ul class="dropdown-content" id="bang">
+                <li class="content-bang"><a href="#">জাতীয়</a></li>
+                <li class="content-bang"><a href="#">সারাবাংলা</a></li>
+                <li class="content-bang"><a href="#">রাজধানী</a></li>
+                <li class="content-bang"><a href="#">রাজনীতি</a></li>
+                <li class="content-bang"><a href="#">আইন আদালত</a></li>
+                <li class="content-bang"><a href="#">শিক্ষা</a></li>
+              </ul>
+            </div>
+            <p><a href="#" class="topics">বিশ্ব</a></p>
+            <p><a href="#" class="topics">খেলা</a></p>
+            <p><a href="#" class="topics">বিনোদন</a></p>
+            <p><a href="#" class="topics">বাণিজ্য</a></p>
+            <div class="topic-dropdown">
+              <p onclick="showList('islam', '.content-islam')">ইসলাম জীবন <i class="fa-solid fa-play drop-icon"></i></p>
+              <ul class="dropdown-content" id="islam">
+                <li class="content-islam"><a href="#">অনলাইন</a></li>
+                <li class="content-islam"><a href="#">প্রিন্ট</a></li>
+              </ul>
+            </div>
+            <p><a href="#" class="topics">জীবনযাপন</a></p>
+            <p><a href="#" class="topics">বসুন্ধরা শুভসঙ্ঘ</a></p>
+            <p><a href="#" class="topics" style="color: #5050fb">ভিডিও</a></p>
+            <div class="topic-dropdown">
+              <p onclick="showList('potrika', '.content-potrika')">পত্রিকা <i class="fa-solid fa-play drop-icon"></i></p>
+              <ul class="dropdown-content" id="potrika">
+                <li class="content-potrika"><a href="#">এক নজরে</a></li>
+                <li class="content-potrika"><a href="#">প্রথম পাতা</a></li>
+                <li class="content-potrika"><a href="#">শেষের পাতা</a></li>
+                <li class="content-potrika"><a href="#">খবর</a></li>
+                <li class="content-potrika"><a href="#">শিল্প বাণিজ্য</a></li>
+                <li class="content-potrika"><a href="#">খেলা</a></li>
+                <li class="content-potrika"><a href="#">দেশে দেশে</a></li>
+                <li class="content-potrika"><a href="#">প্রিয় দেশ</a></li>
+                <li class="content-potrika"><a href="#">পড়ালেখা</a></li>
+                <li class="content-potrika"><a href="#">সম্পাদকীয়</a></li>
+                <li class="content-potrika"><a href="#">উপ-সম্পাদকীয়</a></li>
+                <li class="content-potrika"><a href="#">চিঠিপত্র</a></li>
+                <li class="content-potrika"><a href="#">রং বেরং</a></li>
+                <li class="content-potrika"><a href="#">ইসলামি জীবন</a></li>
+              </ul>
+            </div>
+            <div class="topic-dropdown">
+              <p onclick="showList('other-content', '.content-feat')">ফিচার <i class="fa-solid fa-play drop-icon"></i></p>
+              <ul class="dropdown-content" id="other-content">
+                <li class="content-feat"><a href="#">অবসরে</a></li>
+                <li class="content-feat"><a href="#">ঈদ বিনোদন</a></li>
+                <li class="content-feat"><a href="#">ঈদ সংখ্যা ২০২৪</a></li>
+                <li class="content-feat"><a href="#">ঈদ উৎসব ২০২৪</a></li>
+                <li class="content-feat"><a href="#">ঈদ সংখ্যা ২০২৫</a></li>
+                <li class="content-feat"><a href="#">সিলেবাসে নেই</a></li>
+                <li class="content-feat"><a href="#">শারদীয় শুভেচ্ছা</a></li>
+                <li class="content-feat">
+                  <a href="#">ইসলামি ক্রেডিট কার্ড</a>
+                </li>
+                <li class="content-feat"><a href="#">শিলালিপি</a></li>
+                <li class="content-feat"><a href="#">A টু Z</a></li>
+                <li class="content-feat"><a href="#">টেকবিশ্ব</a></li>
+                <li class="content-feat"><a href="#">ডাক্তার আছেন</a></li>
+                <li class="content-feat"><a href="#">টুনটুন টিনটিন</a></li>
+                <li class="content-feat"><a href="#">মলাটে বিশ্বকাপ</a></li>
+                <li class="content-feat"><a href="#">চাকরি আছে</a></li>
+                <li class="content-feat"><a href="#">রঙের মেলা</a></li>
+                <li class="content-feat"><a href="#">মুঠোয় বিশ্বকাপ</a></li>
+                <li class="content-feat"><a href="#">লাভ ক্ষতি</a></li>
+              </ul>
+            </div>
+            <p><i class="fa-solid fa-bars"></i></p>
+          </nav>
+        </div>
+      </header>
+    </div>
+    <!-- ====== Header Section End ====== -->
+
+    <!-- ====== Highlighted Section Start ====== -->
+    <div class="Highlighted-section">
+      <h2 class="highlighted-title">তারেক রহমানের সাক্ষাৎকার</h2>
+      <section class="highlighted">
+        <div class="highlighted-news-main">
+          <div class="highlighted-news-img" id="main-img">
+            <img
+              src="./images/tarek1.jpg"
+              alt="Tareq Zia"
+              id="main-highlight-img"
+            />
+          </div>
+          <div class="highlighted-news">
+            <h3 class="highlighted-news-title">
+              স্বৈরাচারের চোখে চোখ রেখে সংস্কারের কথা বিএনপিই বলেছিল : তারেক
+              রহমান
+            </h3>
+            <p class="highlighted-news-paragraph">
+              বিএনপির ভারপ্রাপ্ত চেয়ারম্যান তারেক রহমান বলেছেন, বাংলাদেশে
+              রাষ্ট্র মেরামতের ক্ষেত্রে বিভিন্ন বিষয়ে সংস্কার প্রয়োজন। একজন
+              ব্যক্তি দুইবারের বেশি ...
+            </p>
+          </div>
+        </div>
+        <div class="highlighted-news-side">
+          <div class="small-highlighted-news">
+            <div class="small-news">
+              <div class="highlighted-news-img">
+                <img src="./images/tarek2.jpg" alt="Tareq Zia" />
+              </div>
+              <div class="highlighted-news">
+                <p class="highlighted-news-paragraph">
+                  রাজনৈতিক দলগুলোর মধ্যে বিএনপিরই দেশ চালানোর অভিজ্ঞতা ...
+                </p>
+              </div>
+            </div>
+            <div class="small-news">
+              <div class="highlighted-news-img">
+                <img src="./images/tarek3.jpg" alt="Tareq Zia" />
+              </div>
+              <div class="highlighted-news">
+                <p class="highlighted-news-paragraph">
+                  কূটনীতিতে বিএনপির মূলনীতি— সবার আগে বাংলাদেশ : তারেক ...
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="small-highlighted-news">
+            <div class="small-news">
+              <div class="highlighted-news-img">
+                <img src="./images/tarek4.jpg" alt="Tareq Zia" />
+              </div>
+              <div class="highlighted-news">
+                <p class="highlighted-news-paragraph">
+                  বিএনপির অতীত সময়ে সাংবাদিক নির্যাতন-গুম হয়নি, ভবিষ্যতেও হ ...
+                </p>
+              </div>
+            </div>
+            <div class="small-news">
+              <div class="highlighted-news-img">
+                <img src="./images/tarek5.jpg" alt="Tareq Zia" />
+              </div>
+              <div class="highlighted-news">
+                <p class="highlighted-news-paragraph">
+                  বাংলাদেশের মানুষ সিদ্ধান্ত নিয়েছে ভারতের সঙ্গে সম্পর্ক শীতল
+                  থাকবে : তারেক র ...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- ====== Summary Section End ====== -->
+
+    <!-- ====== More news Section End ====== -->
+    <div class="more-news-section">
+      <section class="more-news">
+        <div class="main-news">
+          <div class="main-news-full">
+            <h2 class="main-news-title">
+              ‘ভারত যদি স্বৈরাচারকে আশ্রয় দিয়ে দেশের মানুষের বিরাগভাজন হয়,
+              আমাদের কিছু করার নাই’
+            </h2>
+            <p class="main-news-paragraph">
+              বিএনপির ভারপ্রাপ্ত চেয়ারম্যান তারেক রহমান একান্ত সাক্ষাৎকারে
+              সংস্কার, ভারতের সঙ্গে সম্পর্ক এবং রাজনীতির বিভিন্ন বিষয়ে কথা
+              বলেছেন। সাক্ষাৎকারটি ...
+            </p>
+          </div>
+          <div class="main-news-img">
+            <img src="./images/tarek6.jpg" alt="Tarek Zia" />
+          </div>
+          <div class="side-news">
+            <div class="side-news-article">
+              <p class="side-news-paragraph">
+                সুন্দর-সুষ্ঠু নির্বাচন দেওয়াটাকে জীবনের শেষ ....
+              </p>
+              <img
+                src="./images/side-news1.jpg"
+                alt="side-news"
+                class="side-news-img"
+              />
+            </div>
+            <div class="side-news-article">
+              <p class="side-news-paragraph">
+                ব্যাংক একীভূত হলে ২ লাখ টাকার কম ....
+              </p>
+              <img
+                src="./images/side-news2.jpg"
+                alt="side-news"
+                class="side-news-img"
+              />
+            </div>
+            <div class="side-news-article">
+              <p class="side-news-paragraph">
+                একনজরে আজকের কালের কণ্ঠ (৭ অক্টোবর)
+              </p>
+              <img
+                src="./images/side-news3.jpg"
+                alt="side-news"
+                class="side-news-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="strip-news">
+          <div class="strip-news-card">
+            <img
+              src="./images/strip-news1.jpg"
+              alt="strip-news"
+              class="strip-news-img"
+            />
+            <p class="strip-news-details">
+              বিশ্বব্যাংকের পূর্বাভাস / চলতি অর্থবছরে বাংলাদেশের প্রবৃদ্ধি
+              পৌঁছাবে ৪.৮ শতাংশে
+            </p>
+          </div>
+          <div class="strip-news-card">
+            <img
+              src="./images/strip-news2.jpg"
+              alt="strip-news"
+              class="strip-news-img"
+            />
+            <p class="strip-news-details">
+              সিলেটের সঙ্গে সারা দেশের রেল যোগাযোগ স্বাভাবিক
+            </p>
+          </div>
+          <div class="strip-news-card">
+            <img
+              src="./images/strip-news3.jpg"
+              alt="strip-news"
+              class="strip-news-img"
+            />
+            <p class="strip-news-details">
+              শাকিবের চলচ্চিত্রে কোন ভূমিকায় তৌকির?
+            </p>
+          </div>
+          <div class="strip-news-card">
+            <img
+              src="./images/strip-news4.jpg"
+              alt="strip-news"
+              class="strip-news-img"
+            />
+            <p class="strip-news-details">
+              সর্বজনীন পেনশন স্কিমে মুনাফা যোগ হয়েছে
+            </p>
+          </div>
+        </div>
+      </section>
+      <aside>
+        <div class="aside-title">
+          <img src="./images/aside-news.jpg" alt="aside" id="aside-img" />
+          <h3>জুলাই সনদের গণভোট আর জাতীয় নির্বাচন একই দিনে চান সালাহউদ্দিন</h3>
+        </div>
+        <div class="aside-menu">
+          <p class="aside-menu-option"><a href="#">সর্বশেষ</a></p>
+          <p class="aside-menu-option"><a href="#">দিনের সেরা</a></p>
+          <p class="aside-menu-option"><a href="#">সপ্তাহের সেরা</a></p>
+        </div>
+        <div class="headlines">
+          <p class="new-headline">
+            <i class="fa-solid fa-play"></i>
+            বনশ্রীতে রহস্যময় পরিবার, ৫ বছর ধরে ঘর থেকে বের হন না মা ও দুই ছেলে!
+            <br />
+            <span class="news-time"
+              ><i class="fa-regular fa-clock"></i> ৫ মিনিট আগে |রাজধানী</span
+            >
+          </p>
+          <p class="new-headline">
+            <i class="fa-solid fa-play"></i>
+            যুদ্ধবিরতি নিয়ে হামাসের সঙ্গে প্রথম দফার আলোচনা ‘ইতিবাচক’ <br />
+            <span class="news-time"
+              ><i class="fa-regular fa-clock"></i> ৭ মিনিট আগে |বিশ্ব</span
+            >
+          </p>
+          <p class="new-headline">
+            <i class="fa-solid fa-play"></i>
+            জামালগঞ্জে যুবলীগ নেতা ইকবাল গ্রেপ্তার <br />
+            <span class="news-time"
+              ><i class="fa-regular fa-clock"></i> ১৩ মিনিট আগে |সারাবাংলা</span
+            >
+          </p>
+        </div>
+      </aside>
+    </div>
+    <!-- ====== More news Section End ====== -->
+
+    <!-- ====== JavaScript file ====== -->
+    <script src="script.js"></script>
+  </body>
+</html>
